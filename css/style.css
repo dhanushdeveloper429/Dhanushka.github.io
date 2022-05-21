@@ -47,6 +47,10 @@ button {
     border-width: 0.4rem;
 }
 
+.icon-list {
+    padding: 5px;
+}
+
 ::selection {
     color: #c94e50;
     background: #ffffff
