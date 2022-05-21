@@ -1,13 +1,25 @@
-@import url(normalize.css);@import url(demo.css);@import url(menu_topside.css);body {
+@import url(normalize.css);
+@import url(demo.css);
+@import url(menu_topside.css);
+body {
     background: #ecf0f1;
     color: #2c3e50
 }
 
-body h1,body h2,body h3,body h4,body h5,body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
     font-family: 'Oswald', 'Raleway', Arial, sans-serif
 }
 
-body p,body div,body ul,body li,body span {
+body p,
+body div,
+body ul,
+body li,
+body span {
     font-family: 'Source Sans Pro', Arial, sans-serif
 }
 
@@ -20,13 +32,28 @@ ul {
     background: #ffffff
 }
 
+.buttons {
+    position: relative;
+    top: 2px;
+    padding: 5px;
+    border-radius: 34px;
+    border-width: 0.4rem;
+}
+
+.buttons,
+button {
+    left: 82%;
+    border-radius: 28px;
+    border-width: 0.4rem;
+}
+
 ::selection {
     color: #c94e50;
     background: #ffffff
 }
 
 #open-button {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px
 }
 
@@ -43,7 +70,8 @@ ul {
     color: #16a085
 }
 
-.content a:hover,.content a:focus {
+.content a:hover,
+.content a:focus {
     color: #38c2a7;
     outline: none
 }
@@ -86,9 +114,8 @@ header h1 span {
     color: #5f7183;
     display: block
 }
-header h1 span{
-    
-}
+
+header h1 span {}
 
 header h2 {
     font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -132,18 +159,18 @@ header h2.active {
     padding-top: 184px;
     padding-bottom: 184px
 }
-#skills.contentWrapper.arrow-down ul li h3{
-    content:"";
-    position:absolute;
-    height:2px;
-    width:25px;
-    background:#5bc2ce;
-    top:100%;
-    left:0;
-    margin-top:10px;
-       
 
+#skills.contentWrapper.arrow-down ul li h3 {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background: #5bc2ce;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
 }
+
 #skills ul {
     width: 33.333%;
     padding: 12px;
@@ -156,25 +183,23 @@ header h2.active {
     line-height: 1.8rem;
     font-weight: 400;
     padding-left: 5%
-
 }
-
 
 #skills ul li h3 {
     font-size: 1.8rem;
     line-height: 1.8rem;
     font-weight: 600;
 }
-#skills ul li h3::after { 
-    content:" ";
-    position:absolute;
-    height:2px;
-    width:25px;
-    background:#5bc2ce;
-    top:100%;
-    left:0;
-    margin-top:10px;
-    
+
+#skills ul li h3::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background: #5bc2ce;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
 }
 
 #skills ul li img {
@@ -272,7 +297,7 @@ header h2.active {
 
 #personal:before {
     top: 0px;
-    background: linear-gradient(-135deg, #2980b9 8px, transparent 0),linear-gradient(135deg, #2980b9 8px, transparent 0);
+    background: linear-gradient(-135deg, #2980b9 8px, transparent 0), linear-gradient(135deg, #2980b9 8px, transparent 0);
     background-position: left top;
     content: " ";
     display: block;
@@ -345,7 +370,8 @@ footer p {
     text-align: center
 }
 
-#portSamples,#resumeSamples {
+#portSamples,
+#resumeSamples {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -353,7 +379,8 @@ footer p {
     margin: 0 auto
 }
 
-#portSamples h4,#resumeSamples h4 {
+#portSamples h4,
+#resumeSamples h4 {
     color: #2c3e50;
     width: 100%;
     padding: 12px 20%;
@@ -364,7 +391,8 @@ footer p {
     margin: auto
 }
 
-#portSamples article,#resumeSamples article {
+#portSamples article,
+#resumeSamples article {
     cursor: pointer;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -386,7 +414,8 @@ footer p {
     min-width: 280px
 }
 
-#portSamples article:hover,#resumeSamples article:hover {
+#portSamples article:hover,
+#resumeSamples article:hover {
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
@@ -394,12 +423,14 @@ footer p {
     transform: scale(1.02)
 }
 
-#portSamples article.double,#resumeSamples article.double {
+#portSamples article.double,
+#resumeSamples article.double {
     flex-grow: 2;
     flex-basis: 60%
 }
 
-#portSamples article .imgWrapper,#resumeSamples article .imgWrapper {
+#portSamples article .imgWrapper,
+#resumeSamples article .imgWrapper {
     width: 100%;
     height: 228px;
     overflow: hidden;
@@ -410,7 +441,8 @@ footer p {
     margin: auto
 }
 
-#portSamples article img,#resumeSamples article img {
+#portSamples article img,
+#resumeSamples article img {
     width: 100%;
     min-height: 228px;
     margin: 0 auto;
@@ -418,25 +450,29 @@ footer p {
     border-radius: 6px
 }
 
-#portSamples article .contentWrapper,#resumeSamples article .contentWrapper {
+#portSamples article .contentWrapper,
+#resumeSamples article .contentWrapper {
     z-index: 100;
     padding: 12px
 }
 
-#portSamples article h3,#resumeSamples article h3 {
+#portSamples article h3,
+#resumeSamples article h3 {
     margin: 0 auto;
     color: #2c3e50;
     font-size: 1.4rem
 }
 
-#portSamples article h5,#resumeSamples article h5 {
+#portSamples article h5,
+#resumeSamples article h5 {
     margin: 0 auto;
     color: #7f8c8d;
     font-size: 1.1rem;
     padding: 6px 0 0 0
 }
 
-#portSamples article p,#resumeSamples article p {
+#portSamples article p,
+#resumeSamples article p {
     margin: 0 auto;
     color: #7f8c8d;
     font-size: 1.0rem;
@@ -539,7 +575,7 @@ footer p {
 
 @media (max-width: 1000px) {
     .overlay .portDetails {
-        float:none;
+        float: none;
         clear: both;
         width: 80%;
         margin: auto
@@ -548,29 +584,25 @@ footer p {
 
 @media (max-width: 960px) {
     #ionicApp img {
-        padding-top:10%
+        padding-top: 10%
     }
 }
 
 @media (max-width: 840px) {
     header h1 {
-        padding-top:20%
+        padding-top: 20%
     }
-
     #descriptionWrapper {
         hieght: 160px
     }
-
     #personal ul {
         width: 100%;
         padding-left: 0
     }
-
     #personal ul li {
         max-width: 80%;
         margin: auto
     }
-
     #personal ul p {
         text-align: center
     }
@@ -578,76 +610,78 @@ footer p {
 
 @media (max-width: 760px) {
     #ionicApp img {
-        padding-top:25%
+        padding-top: 25%
     }
 }
 
 @media (max-width: 720px) {
-    #skills .contentWrapper ul,#experience .contentWrapper ul {
-        width:80%;
+    #skills .contentWrapper ul,
+    #experience .contentWrapper ul {
+        width: 80%;
         margin: 24px 10%
     }
-
-    #skills .contentWrapper ul h3,#experience .contentWrapper ul h3 {
+    #skills .contentWrapper ul h3,
+    #experience .contentWrapper ul h3 {
         margin: 8px auto
     }
-
     #ionicApp .imageWrapper {
         width: 100%
     }
-
     #ionicApp img {
         padding-top: 0
     }
-
     #ionicApp ul {
         width: 100%;
         padding: 0
     }
-
-    #portSamples h4,#resumeSamples h4 {
+    #portSamples h4,
+    #resumeSamples h4 {
         padding: 12px 10%
     }
 }
 
 @media (max-width: 500px) {
     #portfolio header h1 span {
-        display:block
+        display: block
     }
 }
 
 @media (max-width: 480px) {
-    #skills,#ionicApp,#personal,#experience {
-        padding-top:68px;
+    #skills,
+    #ionicApp,
+    #personal,
+    #experience {
+        padding-top: 68px;
         padding-bottom: 68px
     }
-
     .arrow-down {
         margin-top: -68px
     }
-
     #personal ul {
         padding-top: 0
     }
-
-    #skills .contentWrapper ul,#experience .contentWrapper ul,#personal .contentWrapper ul {
+    #skills .contentWrapper ul,
+    #experience .contentWrapper ul,
+    #personal .contentWrapper ul {
         width: 96%;
         margin: 18px 2%;
         border-top: 1px solid #2c3e50
     }
-
-    #skills .contentWrapper img,#experience .contentWrapper img,#personal .contentWrapper img {
+    #skills .contentWrapper img,
+    #experience .contentWrapper img,
+    #personal .contentWrapper img {
         float: left
     }
-
-    #skills .contentWrapper i.fa,#experience .contentWrapper i.fa,#personal .contentWrapper i.fa {
+    #skills .contentWrapper i.fa,
+    #experience .contentWrapper i.fa,
+    #personal .contentWrapper i.fa {
         display: none
     }
-
     .overlay .overlay-close {
         width: 48px;
         height: 48px
     }
 }
+
 
 /*# sourceMappingURL=styles.css.map */
