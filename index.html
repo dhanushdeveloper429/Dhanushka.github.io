@@ -6,7 +6,38 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script>
+        var end = new Date('06/01/2022 10:1 AM');
 
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById('countdown').innerHTML = days + 'days ';
+            document.getElementById('countdown').innerHTML += hours + 'hrs ';
+            document.getElementById('countdown').innerHTML += minutes + 'mins ';
+            document.getElementById('countdown').innerHTML += seconds + 'secs';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    </script>
     <title>Dhanush | Full-Stack Developer</title>
 
     <meta name="description" content="I am a front-end developer. I am a problem solver and perpetual seeker of opportunity." />
@@ -62,9 +93,13 @@
         <div class="content-wrap">
 
             <div id="homePage" class="content">
+
                 <header>
+
                     <h1>Dhanush<span>Full-Stack Developer</span></h1>
+
                     <div id="descriptionWrapper">
+
                         <h2 class="scrolling-item active">JAVA/J2EE</h2>
                         <h2 class="scrolling-item">Spring</h2>
                         <h2 class="scrolling-item">Hibernate</h2>
@@ -74,12 +109,17 @@
                         <h2 class="scrolling-item">Convention over configuration</h2>
                         <h2 class="scrolling-item">DRY, single-task, Modularity</h2>
                         <h2 class="scrolling-item">Angular</h2>
+
                     </div>
+                    <div class="yex"><b>7+</b></div>
+                    <div class="yex1"><b>Years of <br>Eperiance</b></div>
                 </header>
+
                 <div class="version">
                     <ul>
                         <li>
-                            Vesrion 2.0
+                            Vesrion 2.0 - Release count down
+                            <div id="countdown"></div>
                         </li>
 
                     </ul>
@@ -117,6 +157,7 @@
                         <div class="clearfix"></div>
                     </div>
                 </section>
+
 
 
 
