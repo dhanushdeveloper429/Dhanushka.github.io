@@ -25,7 +25,12 @@
 }
 
 body {
-    background: #b4bad2;
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fffce1;
     font-weight: 400;
     font-size: 1em;
@@ -185,7 +190,12 @@ body #cdawrap {
     top: auto;
     bottom: 35px;
     right: 35px;
-    background: #b4bad2;
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 1px solid rgba(131, 135, 151, 0.6);
 }
 

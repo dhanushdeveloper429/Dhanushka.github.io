@@ -2,8 +2,13 @@
 @import url(demo.css);
 @import url(menu_topside.css);
 body {
-    background: #ecf0f1;
-    color: #2c3e50
+    background: rgb(248, 250, 252);
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 body h1,
@@ -29,7 +34,12 @@ ul {
 
 ::-moz-selection {
     color: #c94e50;
-    background: #ffffff
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .buttons {
@@ -49,7 +59,12 @@ button {
 
 ::selection {
     color: #c94e50;
-    background: #ffffff
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #open-button {
@@ -72,7 +87,7 @@ button {
 }
 
 .content {
-    background: #ecf0f1;
+    background: rgb(248, 250, 252);
     color: #2c3e50
 }
 
@@ -104,7 +119,12 @@ nav .icon-list .fa:hover {
 }
 
 header {
-    background: #ecf0f1
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header h1 {
@@ -153,7 +173,7 @@ header h2.active {
     height: 0;
     border-left: 32px solid transparent;
     border-right: 32px solid transparent;
-    border-top: 28px solid #ecf0f1;
+    border-top: 28px solid rgb(248, 250, 252);
     margin: auto;
     margin-top: -184px;
     padding-bottom: 152px
@@ -165,7 +185,12 @@ header h2.active {
 }
 
 #skills {
-    background: #9fb2ce;
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-top: 184px;
     padding-bottom: 184px
 }
@@ -262,7 +287,12 @@ header h2.active {
 }
 
 #experience {
-    background: #1d1e1f;
+    background: #076585;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fff, #076585);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fff, #076585);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-top: 184px;
     padding-bottom: 184px
 }
@@ -294,7 +324,7 @@ header h2.active {
 }
 
 #personal {
-    background: #ecf0f1;
+    background: rgb(248, 250, 252);
     color: #7f8c8d;
     padding-top: 92px;
     padding-bottom: 92px
@@ -520,8 +550,8 @@ footer p {
     left: 50%;
     position: absolute;
     z-index: -100;
-    background: #ffffff;
-    color: #ffffff;
+    background: rgb(248, 250, 252);
+    color: rgb(248, 250, 252);
     transition: all .4s ease-in-out
 }
 
