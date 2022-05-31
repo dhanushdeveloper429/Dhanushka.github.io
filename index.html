@@ -6,9 +6,41 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script>
+        var end = new Date('06/09/2022 10:1 AM');
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById('countdown').innerHTML = days + 'days ';
+            document.getElementById('countdown').innerHTML += hours + 'hrs ';
+            document.getElementById('countdown').innerHTML += minutes + 'mins ';
+            document.getElementById('countdown').innerHTML += seconds + 'secs';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    </script>
     <title>Dhanush | Full-Stack Developer</title>
 
-    <meta name="description" content="I am a fullstack developer. I am a problem solver and perpetual seeker of opportunity." />
+    <meta name="description" content="I am a Full-Stack developer. I am a problem solver and perpetual seeker of opportunity." />
     <meta name="keywords" content="UX, UI, user experience design, web design, user interface design, interaction design" />
     <meta name="author" content="Dhanush" />
     <link rel="shortcut icon" href="favicon.ico">
@@ -35,7 +67,7 @@
         <!-- <div class="menu-wrap">
             <nav class="menu-top">
                 <div class="profile"><img src="img/erik-florida-thumb.jpg" alt="Dhanush"/> -->
-        <div>I am a fullstack developer. I am a problem solver and perpetual seeker of opportunity.</div>
+        <div>I am a Full-Stack developer. I am a problem solver and perpetual seeker of opportunity.</div>
     </div>
     <!-- <div class="icon-list">
         <a href="https://github.com/dhanushdeveloper" target="_blank"><i class="fa fa-github?"></i></a>
@@ -87,7 +119,7 @@
             <div class="version">
                 <ul>
                     <li>
-                        version 2.0 - Release count down
+                        Release Version 2.0 Thursday May 31 7:43:21pm<br> version 2.1 - Release count down
                         <div id="countdown"></div>
                     </li>
 
