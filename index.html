@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+        window.onscroll = function() {
+            myFunction()
+        };
+
         var end = new Date('06/09/2022 10:1 AM');
 
         var _second = 1000;
@@ -37,16 +47,6 @@
         }
 
         timer = setInterval(showRemaining, 1000);
-
-        function myFunction() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-        }
-        window.onscroll = function() {
-            myFunction()
-        };
     </script>
     <title>Dhanush | Full-Stack Developer</title>
 
@@ -72,14 +72,15 @@
 </head>
 
 <body>
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
     </div>
     <div class="container">
         <!-- <div class="menu-wrap">
             <nav class="menu-top">
                 <div class="profile"><img src="img/erik-florida-thumb.jpg" alt="Dhanush"/> -->
-        <marquee behavior="scroll" direction="right">I am a Full-Stack developer. I am a problem solver and perpetual seeker of opportunity.</marquee>
 
     </div>
     <!-- <div class="icon-list">
