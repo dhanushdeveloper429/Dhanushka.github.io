@@ -37,6 +37,11 @@ body {
     font-family: 'Raleway', Arial, sans-serif;
 }
 
+.topnav.home {
+    width: 100px;
+    height: 100px;
+}
+
 a {
     color: #4e4a46;
     text-decoration: none;
