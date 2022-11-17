@@ -22,13 +22,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/business-casual.css" rel="stylesheet">
-    <script>
-        window.onbeforeunload = () => {
-  for(const form of document.getElementsByTagName('form')) {
-    form.reset();
-  }
-}
-        </script>
+
 
 </head>
 
@@ -126,7 +120,15 @@
                     <div class="form-group col-lg-12">
                         <button type="submit" class="btn btn-secondary">Submit</button>
                     </div>
+                    
                 </div>
+                   <script>
+        window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
+        </script>
             </form>
         </div>
 
