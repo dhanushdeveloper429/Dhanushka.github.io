@@ -129,6 +129,10 @@
       form.onsubmit=false;
   }
 }
+        var formElement = document.getElementById("form");
+submitForm(formElement, function() {
+    console.log("Form submitted");
+});
         </script>
             </form>
         </div>
