@@ -82,7 +82,7 @@ const EXPERIENCE = [
     current: true,
     period: 'NOV 2019 – PRESENT',
     role: 'Lead – Full Stack Java Developer',
-    company: 'Elevance Health · Remote',
+    company: 'Healthcare Enterprise · Remote',
     bullets: [
       'Integrated OpenAI / Gemini LLM APIs into internal healthcare tools for automated report summarization and clinical note drafting, reducing manual documentation time by ~40%.',
       'Built a RAG (Retrieval-Augmented Generation) pipeline using LangChain + Pinecone vector DB to power an AI-driven FAQ assistant for patient-facing portals.',
@@ -157,7 +157,7 @@ const ACHIEVEMENTS = [
   {
     featured: true,
     title: 'NGX Charts Healthcare Dashboard',
-    company: 'Elevance Health',
+    company: 'Healthcare Enterprise',
     desc: 'Built an executive analytics dashboard using Angular 10 and NGX Charts / Google Vega integrated with Spring Boot microservices and MongoDB. Delivered real-time health metrics for thousands of users.',
     metrics: [{ label:'Users Served', val:'50K+' }, { label:'Charts Built', val:'15+' }, { label:'API Latency', val:'<80ms' }],
     tags: ['Angular 10', 'NGX Charts', 'Spring Boot', 'MongoDB', 'REST APIs'],
@@ -165,7 +165,7 @@ const ACHIEVEMENTS = [
   {
     featured: true,
     title: 'JWT + OAuth2 Auth Server',
-    company: 'Elevance Health',
+    company: 'Healthcare Enterprise',
     desc: 'Architected a complete authentication and authorization platform using Spring Boot Auth Server, JWT tokens, and OAuth2/SAML 2.0 SSO — securing enterprise apps with role-based access control.',
     metrics: [{ label:'Auth Method', val:'JWT+OAuth2' }, { label:'SSO', val:'SAML 2.0' }, { label:'Security', val:'WCAG 2.1' }],
     tags: ['Spring Security', 'JWT', 'OAuth2', 'SAML 2.0', 'Spring Boot'],
@@ -173,7 +173,7 @@ const ACHIEVEMENTS = [
   {
     featured: false,
     title: 'Microservices ETL Pipeline',
-    company: 'Elevance Health',
+    company: 'Healthcare Enterprise',
     desc: 'Designed and built a data migration ETL system using MuleSoft and Talend, moving data across multiple databases with specialized character filtering and real-time indexing via Elasticsearch.',
     metrics: [{ label:'DBs Migrated', val:'5+' }, { label:'Tool', val:'MuleSoft' }],
     tags: ['MuleSoft', 'Talend', 'Elasticsearch', 'Spring Batch', 'Oracle'],
@@ -205,7 +205,7 @@ const ACHIEVEMENTS = [
   {
     featured: false,
     title: 'Accessible React/Angular CMS',
-    company: 'Elevance Health',
+    company: 'Healthcare Enterprise',
     desc: 'Delivered a WCAG 2.1 AA-compliant Content Management System using Angular 8/10 and React.js. Collaborated with legal/compliance teams. Implemented ARIA, semantic HTML, and ADA standards.',
     metrics: [{ label:'WCAG', val:'AA Level' }, { label:'ADA', val:'Compliant' }],
     tags: ['Angular 8/10', 'React.js', 'WCAG 2.1', 'ARIA', 'ADA Compliance'],
