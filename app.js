@@ -392,7 +392,7 @@ document.getElementById('contact-form').addEventListener('submit', e => {
   if (!btn) return;
 
   function getTheme() {
-    return document.documentElement.getAttribute('data-theme') || 'dark';
+    return document.documentElement.getAttribute('data-theme') || 'light';
   }
 
   function setTheme(theme) {
