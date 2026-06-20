@@ -1,208 +1,269 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
-
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script>
-      function myFunction() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-        }
-        window.onscroll = function() {
-            myFunction()
-        };
-    </script>
-    <title>Dhanush | Full-Stack Developer</title>
-
-    <meta name="description" content="I am a Full-Stack developer. I am a problem solver and perpetual seeker of opportunity." />
-    <meta name="keywords" content="UX, UI, user experience design, web design, user interface design, interaction design" />
-    <meta name="author" content="Dhanush" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/menu_topside.css" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/menu_left.css" />
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!-- <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/66BAE674-3D0F-8548-A0C2-0ADCC45BD414/main.js" charset="UTF-8"></script>
-    <link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/414DB54CCDA0-2C0A-8458-F0D3-476EAB66/abn/main.css" /> -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Dhanushka Srinivas — Lead Full Stack Java Developer with 10+ years building scalable enterprise systems. Spring Boot, Microservices, Angular, React, AWS."/>
+  <title>Dhanushka Srinivas · Full Stack Java Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&family=VT323&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Prevent flash of wrong theme -->
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ds-theme')||'dark');</script>
 </head>
-
 <body>
-    <div class="header">
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="crt-corners"  aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-bracket">{</span>
+      <span class="nav-name">DS</span>
+      <span class="nav-bracket">}</span>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="#hero"       class="nav-link active" data-section="hero">_HOME</a></li>
+      <li><a href="#about"      class="nav-link"        data-section="about">_ABOUT</a></li>
+      <li><a href="#skills"     class="nav-link"        data-section="skills">_SKILLS</a></li>
+      <li><a href="#experience" class="nav-link"        data-section="experience">_EXPERIENCE</a></li>
+      <li><a href="#projects"   class="nav-link"        data-section="projects">_HIGHLIGHTS</a></li>
+      <li><a href="#contact"    class="nav-link"        data-section="contact">_CONTACT</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark theme">
+      <span class="theme-icon-dark">🌙</span>
+      <span class="theme-icon-light">☀️</span>
+      <span class="theme-track"><span class="theme-thumb"></span></span>
+    </button>
+    <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+    <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot amber"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">~/resume/init.sh</span>
         </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd" id="t-cmd1"></span></div>
+          <div class="t-line" id="t-line2" style="display:none"><span class="t-prompt">→</span> <span class="t-out" id="t-out2"></span></div>
+          <div class="t-line" id="t-line3" style="display:none"><span class="t-prompt">→</span> <span class="t-out" id="t-out3"></span></div>
+          <div class="t-line" id="t-line4" style="display:none"><span class="t-prompt">$</span> <span class="t-cursor blink">█</span></div>
+        </div>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="glitch" data-text="DHANUSHKA">DHANUSHKA</span><br/>
+        <span class="hero-name-accent glitch" data-text="SRINIVAS">SRINIVAS</span>
+      </h1>
+      <p class="hero-role">
+        <span class="role-tag">&lt;</span>
+        Lead Full Stack Java Developer
+        <span class="role-tag">/&gt;</span>
+      </p>
+      <p class="hero-tagline">Spring Boot · Microservices · Angular · React · AWS · 10+ Years Enterprise Experience</p>
+
+      <div class="hero-cta">
+        <a href="#experience" class="btn-primary">VIEW EXPERIENCE</a>
+        <a href="#contact"    class="btn-secondary">HIRE ME</a>
+        <a href="mailto:dhanushkasrinivas.katuri@gmail.com" class="btn-secondary">✉ EMAIL ME</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hs"><span class="hs-val">10+</span><span class="hs-lbl">YRS EXP</span></div>
+        <div class="hs-div"></div>
+        <div class="hs"><span class="hs-val">5</span><span class="hs-lbl">COMPANIES</span></div>
+        <div class="hs-div"></div>
+        <div class="hs"><span class="hs-val">20+</span><span class="hs-lbl">TECHNOLOGIES</span></div>
+        <div class="hs-div"></div>
+        <div class="hs"><span class="hs-val">OPEN</span><span class="hs-lbl">TO WORK</span></div>
+      </div>
     </div>
-    <div class="container">
-        <!-- <div class="menu-wrap">
-            <nav class="menu-top">
-                <div class="profile"><img src="img/erik-florida-thumb.jpg" alt="Dhanush"/> -->
 
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="scroll-arrow">▼</div>
     </div>
-     <div class="icon-list">
-        <a href="https://github.com/dhanushdeveloper" target="_blank"><i class="fa fa-github?"></i></a>
-        <a href="https://www.linkedin.com/in/dhanushka-srinivas-katuri-756b03124/" target="_blank"><i
-                    class="fa fa-linkedin?"></i></a>
-        <a href="" target="_blank"><i class="fa fa-twitter?"></i></a>
+  </section>
 
-        <a href="" target="_blank"><i class="buttons"> <button>S</button></i></a>
-        <a href="" target="_blank"><i class="buttons"> <button>C</button></i></a>
-    </div> 
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-label">// 01 — ABOUT</div>
+      <h2 class="section-title">WHO I AM</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Software Developer with <span class="hl">10+ years of experience</span> designing, developing, and maintaining web-based and business applications using <span class="hl">Java, J2EE, Spring, Oracle</span>, and cloud technologies — proficient in all aspects of system architecture including designing and implementing <span class="hl">large, scalable, distributed systems.</span></p>
+          <p>Strong expertise in building enterprise applications using <span class="hl">Spring Core, Spring MVC, Spring AOP, Spring ORM, Spring Boot</span>, and experience with IBM WebSphere, JBoss, and Apache Tomcat application servers.</p>
+          <p>Experienced in <span class="hl">Object-Oriented analysis and design</span>, J2EE design patterns (Singleton, Factory, Session Façade, DAO, Service Locator), RESTful & SOAP web services, and Agile delivery. Known for loyalty, quick problem solving, and excellent teamwork.</p>
+          <div class="about-links">
+            <a href="mailto:dhanushkasrinivas.katuri@gmail.com" class="about-link">✉ EMAIL</a>
+            <a href="tel:4083408287" class="about-link">📞 (408) 340-8287</a>
+            <a href="#" class="about-link">◈ LINKEDIN</a>
+            <a href="#" class="about-link">⬇ RESUME PDF</a>
+          </div>
+        </div>
 
-
-    <!-- <button class="menu-button" id="open-button">Open Menu</button> -->
-
-    <nav class="navbar navbar-expand-lg bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Full-Stack Developer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link disabled" aria-current="page" href="#">Home</a>
-                    <!--  <a class="nav-link" href="#">Skills</a> -->
-                    <a class="nav-link " href="./src/contact/contact.html">Contact</a>
-                    <a class="nav-link" href="./src/projects/index.html">Projects</a>
-                </div>
+        <div class="about-card-col">
+          <div class="info-card">
+            <div class="info-card-header">// profile.json</div>
+            <div class="info-card-body">
+              <div class="json-line"><span class="jk">"name"</span>: <span class="js">"Dhanushka Srinivas"</span>,</div>
+              <div class="json-line"><span class="jk">"title"</span>: <span class="js">"Lead FS Java Developer"</span>,</div>
+              <div class="json-line"><span class="jk">"phone"</span>: <span class="js">"(408) 340-8287"</span>,</div>
+              <div class="json-line"><span class="jk">"location"</span>: <span class="js">"Remote"</span>,</div>
+              <div class="json-line"><span class="jk">"experience"</span>: <span class="jn">10</span>,</div>
+              <div class="json-line"><span class="jk">"available"</span>: <span class="jb">true</span>,</div>
+              <div class="json-line"><span class="jk">"focus"</span>: <span class="js">"Enterprise Java"</span>,</div>
+              <div class="json-line"><span class="jk">"expertise"</span>: [</div>
+              <div class="json-line pl">  <span class="js">"Spring Boot"</span>,</div>
+              <div class="json-line pl">  <span class="js">"Microservices"</span>,</div>
+              <div class="json-line pl">  <span class="js">"Angular / React"</span>,</div>
+              <div class="json-line pl">  <span class="js">"AWS / Cloud"</span></div>
+              <div class="json-line">]</div>
             </div>
-               <div class="icon-list">
-    
-                <a href="https://www.linkedin.com/in/dhanushka-srinivas-756b03124/" target="_blank"><img class="card-img-top" src="./src/img/free-linkedin-icon-112-thumb.png" style="width: 35px; height: 35px; right: 100%; margin-right: 10px;" alt=""></a>
-                      <!--  <a class="github" href="https://github.com/dhanushdeveloper" target="_blank"> <img class="card-img-top" src="./src/img/Octocat.png" style="width: 45px; height: 40px; right: 100%; margin-right: 10px;" alt=""></a> -->
+          </div>
         </div>
-    </nav>
-    <div class="content-wrap">
+      </div>
+    </div>
+  </section>
 
-        <div id="homePage" class="content">
+  <!-- SKILLS -->
+  <section class="section alt aurora" id="skills">
+    <div class="section-inner">
+      <div class="section-label">// 02 — SKILLS</div>
+      <h2 class="section-title">TECH STACK</h2>
+      <div class="skills-cats">
+        <div class="skill-cat reveal" style="border-color:rgba(255,107,157,.25);">
+          <div class="skill-cat-title" style="color:var(--pink)"><span class="sct-bullet">▸</span> BIG DATA &amp; TOOLS</div>
+          <div class="skill-list" id="sk-tools"></div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-title"><span class="sct-bullet">▸</span> BACKEND &amp; JAVA</div>
+          <div class="skill-list" id="sk-backend"></div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-title"><span class="sct-bullet">▸</span> FRONTEND</div>
+          <div class="skill-list" id="sk-frontend"></div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-title"><span class="sct-bullet">▸</span> DATABASES</div>
+          <div class="skill-list" id="sk-db"></div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-title"><span class="sct-bullet">▸</span> DEVOPS &amp; CLOUD</div>
+          <div class="skill-list" id="sk-devops"></div>
+        </div>
+      </div>
 
-            <header>
+      <!-- Tech tag cloud -->
+      <div class="tag-cloud-section">
+        <div class="tag-cloud-label">// FULL TECHNOLOGY INVENTORY</div>
+        <div class="tag-cloud" id="tag-cloud"></div>
+      </div>
+    </div>
+  </section>
 
-                <h1>Hi, I am Dhanushka srinivas <span>Full-Stack Developer</span></h1>
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <div class="section-label">// 03 — EXPERIENCE</div>
+      <h2 class="section-title">CAREER TIMELINE</h2>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
 
-                <div id="descriptionWrapper">
+  <!-- PROJECT HIGHLIGHTS -->
+  <section class="section alt aurora" id="projects">
+    <div class="section-inner">
+      <div class="section-label">// 04 — PROJECT HIGHLIGHTS</div>
+      <h2 class="section-title">KEY ACHIEVEMENTS</h2>
+      <div class="proj-grid" id="proj-grid"></div>
+    </div>
+  </section>
 
-                    <h2 class="scrolling-item active">JAVA/J2EE</h2>
-                    <h2 class="scrolling-item">Spring Boot</h2>
-                    <h2 class="scrolling-item">Hibernate</h2>
-                    <h2 class="scrolling-item">Node/Javascript</h2>
-                    <h2 class="scrolling-item">Angular</h2>
-                    <h2 class="scrolling-item">Git/Gitlab/bitbucket</h2>
-                    <h2 class="scrolling-item">Security, OpenID, siteminder</h2>
-
-                 
-
-                </div>
-                <div class="yex"><b>around 9 </b></div>
-                <div class="yex1"><b>Years of <br>Eperiance</b></div>
-            </header>
-
-            <div class="version">
-                <ul>
-                    <li>
-                        Release Version 2.0 
-                    </li>
-
-                </ul>
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="section-label">// 05 — CONTACT</div>
+      <h2 class="section-title">GET IN TOUCH</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">Available for <span class="hl">senior/lead roles, contracts, and consulting</span>. I respond within 24 hours.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="ci-icon">✉</span>
+              <a class="ci-val ci-link" href="mailto:dhanushkasrinivas.katuri@gmail.com">dhanushkasrinivas.katuri@gmail.com</a>
             </div>
+            <div class="contact-item">
+              <span class="ci-icon">☎</span>
+              <a class="ci-val ci-link" href="tel:4083408287">(408) 340-8287</a>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">◈</span>
+              <a class="ci-val ci-link" href="#">linkedin.com/in/dhanushkasrinivas</a>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">📍</span>
+              <span class="ci-val">Remote / Available Nationwide</span>
+            </div>
+          </div>
 
-            <section id="skills">
-                <div class="contentWrapper">
-                    <div class="arrow-down"></div>
-                    <ul>
-                        <li>
-                            <h3>Java/J2EE</h3>
-                        </li>
-                        <li>SpringBoot</li>
-                        <li>Hibernate</li>
-                        <li>REASTful APIs</li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>JavaScript</h3>
-                        </li>
-                        <li>Backbone/Marionette</li>
-                        <li>Angular</li>
-                        <li>Web Apps</li>
-                        <li>Javascript </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>HTML5/CSS3</h3>
-                        </li>
-                        <li>Semantic,Bluma</li>
-                        <li>SASS/LESS</li>
-                        <li>Limit nesting </li>
-                        <li>variable and mixins for modularity</li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-            </section>
-
-
-
-
-            <section id="experience">
-                <div class="contentWrapper">
-                    <ul>
-                        <li>
-                            <h3>Always Learning</h3>
-                        </li>
-                        <li>Love to read</li>
-                        <li>Fast learner</li>
-                        <li>Cristiano Ronaldo fan</li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>Team Player</h3>
-                        </li>
-                        <li>Get along very well with others</li>
-                        <li>Appreciate diversity</li>
-                        <li>Natural leader</li>
-                        <li>Teams can always outperform individuals</li>
-                    </ul>
-
-                    <div class="clearfix"></div>
-                </div>
-            </section>
-
-
-
-            <footer>
-                <div class="contentWrapper">
-                    <p>Built by Dhanushka srinivas</p>
-                </div>
-            </footer>
-
+          <div class="availability-badge">
+            <div class="avail-dot"></div>
+            <span>AVAILABLE FOR NEW OPPORTUNITIES</span>
+          </div>
         </div>
-    </div>
-    <!-- /content-wrap -->
-    </div>
-    <!-- /container -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/main.js"></script>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label class="form-label" for="cf-name">YOUR NAME</label>
+            <input type="text" id="cf-name" class="form-input" placeholder="Hiring Manager" required/>
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="cf-email">EMAIL</label>
+            <input type="email" id="cf-email" class="form-input" placeholder="hr@company.com" required/>
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="cf-subject">SUBJECT</label>
+            <input type="text" id="cf-subject" class="form-input" placeholder="Job Opportunity / Collaboration" required/>
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="cf-msg">MESSAGE</label>
+            <textarea id="cf-msg" class="form-input form-textarea" placeholder="Tell me about the role or project..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-w" id="cf-submit">SEND MESSAGE ▶</button>
+          <div class="form-feedback" id="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 DHANUSHKA SRINIVAS · ALL RIGHTS RESERVED</span>
+      <span class="footer-stack">LEAD FULL STACK JAVA DEVELOPER · 10+ YEARS</span>
+    </div>
+    <div class="footer-prompt">
+      <span class="fp-user">dhanushka@portfolio</span><span class="fp-sep">:</span><span class="fp-path">~/</span><span class="fp-sym"> $</span><span class="blink"> █</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="animations.js"></script>
 </body>
-
 </html>
