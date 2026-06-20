@@ -253,7 +253,7 @@ window.addEventListener('load', () => {
         typeWriter(out2, 'Loading: Lead Full Stack Java Developer...', 28, () => {
           setTimeout(() => {
             line3.style.display = '';
-            typeWriter(out3, 'Ready. 10 yrs · Elevance Health · Available ✓', 26, () => {
+            typeWriter(out3, 'Ready. 10 yrs · Enterprise Java · Available ✓', 26, () => {
               setTimeout(() => { line4.style.display = ''; }, 300);
             });
           }, 200);
@@ -383,12 +383,25 @@ document.getElementById('contact-form').addEventListener('submit', e => {
     fb.className = 'form-feedback err'; fb.textContent = '⚠ Please enter a valid email.'; return;
   }
   btn.textContent = 'SENDING...'; btn.disabled = true;
-  setTimeout(() => {
-    fb.className = 'form-feedback ok';
-    fb.textContent = '✓ Message sent! Dhanushka will respond within 24 hours.';
+  fetch('https://formspree.io/f/dhanushdeveloper429', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, subject: subj, message: msg })
+  }).then(res => {
+    if (res.ok) {
+      fb.className = 'form-feedback ok';
+      fb.textContent = '✓ Message sent! Dhanushka will respond within 24 hours.';
+      e.target.reset();
+    } else {
+      fb.className = 'form-feedback err';
+      fb.textContent = '⚠ Oops! There was a problem sending your message.';
+    }
+  }).catch(err => {
+    fb.className = 'form-feedback err';
+    fb.textContent = '⚠ Network error. Please try again.';
+  }).finally(() => {
     btn.textContent = 'SEND MESSAGE ▶'; btn.disabled = false;
-    e.target.reset();
-  }, 1200);
+  });
 });
 
 // ── THEME TOGGLE ──────────────────────────────────────
